@@ -1,0 +1,230 @@
+/* Estilo del cuerpo */
+body {
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    background: url('/static/images/background4.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir toda la pantalla */
+    background-color: #f4f7fa; /* Color de respaldo si la imagen no carga */
+}
+
+.container {
+    width: 100%; /* Asegura que use todo el ancho disponible */
+    max-width: 800px; /* Limita el ancho máximo de la tarjeta */
+}
+
+/* Estilo de la tarjeta */
+
+.card {
+    max-width: 800px; /* Limita el ancho máximo de la tarjeta */
+    padding: 3rem 2rem; /* Espaciado interno */
+    margin: auto; /* Asegura que se mantenga centrado si está dentro de un contenedor */
+    text-align: center; /* Centra todo el contenido */
+    background: rgba(6, 47, 157, 0.936);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 150px; /* Tamaño máximo */
+    margin: 0 auto 20px auto; /* Centrado y espacio inferior */
+    border-radius: 50%; /* Circular */
+    border: 4px solid #ffffff; /* Borde blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: block;
+}
+
+.card h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Espacio debajo */
+    color: #d3e3f5; /* Color más suave */
+}
+
+.card .form-label {
+    margin-bottom: 0.5rem;
+}
+
+.card .form-control, 
+.card .form-select {
+    padding: 1rem; /* Espacio interno uniforme */
+    font-size: 1rem; /* Texto uniforme */
+    height: auto; /* Ajusta la altura automáticamente */
+    border-radius: 10px; /* Bordes redondeados uniformes */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    margin-bottom: 1rem; /* Espaciado uniforme */
+    width: 100%; /* Asegura que ambos ocupen todo el ancho */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.form-control, .form-select {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Estilo de etiquetas y botones */
+.form-label, .btn {
+    color: #ffffff;
+}
+
+/* Botón primario */
+.btn-primary {
+    display: block;
+    width: 100%; /* Ancho completo */
+    padding: 1rem; /* Espaciado interno mayor */
+    font-size: 1.2rem; /* Texto más grande */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #37a3ca, #1d84b5); /* Degradado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background 0.3s ease, transform 0.2s ease; /* Animación */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1d84b5, #37a3ca);
+    transform: scale(1.05);
+}
+
+img {
+    margin-bottom: 20px;
+    border-radius: 50%; /* Convierte el logo en un círculo */
+    border: 5px solid #ffffff; /* Agrega un borde blanco alrededor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.respuesta-llm {
+    text-align: left; /* Texto alineado a la izquierda */
+    white-space: pre-wrap; /* Conserva los saltos de línea */
+    font-size: 1rem; /* Tamaño de texto estándar */
+    line-height: 1.5; /* Espaciado entre líneas */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #e7f5fe; /* Fondo azul claro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    max-height: 300px; /* Altura máxima para mantenerlo contenido */
+    overflow-y: auto; /* Añade scroll si el contenido excede la altura */
+}
+
+.historial-container {
+    max-height: 300px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Activa el scroll vertical */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #e7f5fe; /* Fondo azul claro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.list-group-item {
+    text-align: left; /* Alinea el contenido a la izquierda */
+    font-size: 1rem; /* Tamaño de texto estándar */
+    line-height: 1.5; /* Espaciado entre líneas */
+    border: none; /* Elimina los bordes individuales de los elementos */
+    padding: 10px 0; /* Espaciado interno más cómodo */
+    color: #333; /* Color de texto */
+    background-color: transparent; /* Fondo transparente para cada item */
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre los elementos */
+}
+
+.text-aliceblue {
+    color: aliceblue;
+}
+
+.label-custom {
+    color: aliceblue;
+    font-weight: bold; /* Si quieres que sea negrita */
+    font-size: 16px;   /* Ajusta el tamaño según sea necesario */
+}
+
+.scrollable {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.chart-container {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: rgba(6, 47, 157, 0.936); /* Fondo claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.chart-container img {
+    max-width: 99%; /* Asegura que no se salga del contenedor */
+    height: auto;   /* Mantiene las proporciones */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* Bordes suaves para las imágenes */
+}
+.chart-container h5 {
+    margin-bottom: 15px;
+    color: aliceblue;
+}
+
+.list-group-item-custom {
+    background-color: rgba(13, 52, 108, 0.936);
+    color: aliceblue;
+}
+
+.metrics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(6, 47, 157, 0.936);
+    border-radius: 15px;
+    padding: 20px;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+.metrics ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.metrics li {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    background-color: rgba(6, 47, 157, 0.936);
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+.table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table-container table {
+    width: 120%;
+    border-collapse: collapse;
+}
+.table-container th, .table-container td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.table-container th {
+    background-color: rgba(6, 47, 157, 0.936);
+    color: aliceblue;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}

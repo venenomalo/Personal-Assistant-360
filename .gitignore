@@ -1,0 +1,24 @@
+# Archivos sensibles
+.env
+*.env
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Entorno virtual
+venv/
+.venv/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+*.tmp
