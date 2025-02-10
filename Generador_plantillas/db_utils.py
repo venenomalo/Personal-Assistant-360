@@ -90,19 +90,6 @@ def obtener_historial_mongo(nombre, puesto, max_mensajes=10):
     ).limit(max_mensajes)
     return list(cursor)
 
-"""
-def obtener_contexto_por_puesto(puesto):
-    # Devuelve el contexto basado en el puesto del usuario.
-    contextos = {
-        "CSR": "Eres un asistente experto en atención al cliente en un call center...",
-        "Planificacion": "Eres un asistente especializado en planificación y administración...",
-        "Supervisor": "Eres un asistente para supervisores y coordinadores de equipos...",
-        "RRHH": "Eres un asistente para el departamento de Recursos Humanos...",
-        "Reporting": "Eres un asistente experto en reporting y análisis de datos...",
-    }
-    return contextos.get(puesto, "Eres un asistente genérico.")
-"""
-
 def create_connection():
     """Crea y retorna una conexión a la base de datos."""
     if not os.path.exists('./data'):
@@ -127,8 +114,6 @@ def initialize_db():
     ''')
     conn.commit()
     conn.close()
-
-
 
 def insert_dataset(file_name, file_path, category, description, chart_paths, metricas=None):
     """Inserta un dataset procesado en la base de datos."""
@@ -172,7 +157,6 @@ def get_all_datasets():
         cursor.execute(query)
         datasets = cursor.fetchall()
         conn.close()
-
         # Convertir cada tupla en un diccionario
         return [
             {

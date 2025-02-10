@@ -33,13 +33,6 @@ def buscar_documentos(consulta, rol):
         top_k=5,
         include_metadata=True
     )
-    """
-    # Depuración: Ver qué documentos se están recuperando
-    print("Documentos recuperados:")
-    for res in resultados["matches"]:
-        print(f"- ID: {res['id']}, Título: {res['metadata'].get('titulo')}, Fragmento: {res['metadata'].get('fragmento', 'Sin contenido')}")
-    """
-    
     return resultados["matches"]  # Devuelve los fragmentos recuperados
 
 
@@ -82,8 +75,6 @@ def generar_respuesta_llm(consulta, fragmentos):
     Responde de manera clara y profesional a la siguiente consulta:
     {consulta}
     """
-    # print(f"Prompt enviado al modelo:\n{prompt}")
-
     # Enviar el prompt al LLM
     try:
         response = client.chat.completions.create(

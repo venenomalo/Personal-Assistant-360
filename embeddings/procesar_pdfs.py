@@ -72,36 +72,6 @@ def procesar_y_guardar_embeds(pdf_path, metadata, rol):
         except Exception as e:
             print(f"Error al subir el vector con ID {metadata['id']}-{i}: {e}")
 
-"""
-def procesar_y_guardar_embeds(pdf_path, metadata, rol):
-    texto = extraer_texto(pdf_path)
-    fragmentos = dividir_texto(texto)
-    embeddings = OpenAIEmbeddings(api_key=openai_api_key)
-
-    index = conectar_indice(rol.lower())  # Usar el índice general del rol
-
-    for i, fragmento in enumerate(fragmentos):
-        embedding = embeddings.embed_query(fragmento)
-        # Configurar metadatos dinámicos para los roles
-        cleaned_metadata = {
-            "id": metadata["id"],
-            "roles": metadata.get("roles", [rol.lower()]),  # Si no se especifica, usar el rol del índice
-            "titulo": metadata.get("titulo", "Sin título"),
-            "fragmento": fragmento
-        }
-        try:
-            index.upsert(
-                vectors=[
-                    {
-                        "id": f"{metadata['id']}-{i}",
-                        "values": embedding,
-                        "metadata": cleaned_metadata,
-                    }
-                ]
-            )
-        except Exception as e:
-            print(f"Error al subir el vector con ID {metadata['id']}-{i}: {e}")
-            """
 # Procesar todos los PDFs en una carpeta específica para cada rol
 def procesar_carpeta(carpeta, rol):
     carpeta = os.path.join("embeddings", "data", rol)  # Ajustar ruta
