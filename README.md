@@ -1,24 +1,90 @@
-# TFM-Data-Science
-Desarrollo de un agente de inteligencia artificial multipropósito para optimizar procesos en un Call Center Descripción Este proyecto tiene como objetivo desarrollar un agente de inteligencia artificial diseñado para optimizar procesos y mejorar la eficiencia en los diferentes departamentos de un call center u otra empresa de la que se puedan conseguir datos. El agente no solo proporcionará soporte a los agentes de atención al cliente, facilitando el acceso rápido a documentación clave (guiones, FAQ, políticas), sino que también servirá como apoyo para otros departamentos, como Reporting, Recursos Humanos (RRHH), Planificación, Administración, Coordinadores…
-El agente será capaz de adaptarse al perfil del usuario que lo utilice, ofreciendo respuestas personalizadas y contextualizadas, automatizando tareas comunes y proporcionando información relevante para cada área. La implementación se apoyará en técnicas de Procesamiento del Lenguaje Natural (NLP), sistemas de búsqueda semántica y gestión de datos. 
-Objetivos 
-Objetivo General 
-Desarrollar un agente de inteligencia artificial que centralice y automatice la recuperación de información, adaptando las respuestas a las necesidades específicas de los diferentes departamentos de un call center. 
-Objetivos Específicos 
-1. Centralizar toda la documentación interna (scripts de llamadas, políticas, procedimientos operativos).
-2. Implementar un sistema LLM (Large Language Model) que permita a los usuarios realizar consultas en lenguaje natural de manera precisa y contextualizada.
-3. Personalizar las respuestas del agente según el perfil del usuario (agentes, RRHH, Reporting, Planificación).
-4. Realizar análisis de los datos disponibles del call center, extrayendo información relevante y proporcionando insights sobre el desempeño operativo, tiempos de atención y otros KPIs clave.
+# 🧠 Personal Assistant 360º – TFM Data Science
 
-Breve descripción de los orígenes de datos 
-1. Documentación interna del call center: o Guiones de llamadas , preguntas frecuentes (FAQ), políticas de atención al cliente.
-2. Datos CRM (Customer Relationship Management): o Información sobre el historial de interacciones de clientes y métricas operativas.
-3. Reportes y datos de desempeño: o Indicadores clave (AHT, FCR, satisfacción del cliente). o Reportes de desempeño de agentes y departamentos.
-4. Datos de Recursos Humanos: o Políticas de personal, formación, consultas administrativas y gestión de turnos.
-5. Datos simulados o públicos: o Creación de datos ficticios basados en estándares de la industria o datasets públicos (Kaggle, UCI).
+**Asistente de inteligencia artificial multipropósito para la automatización y mejora de procesos en empresas, con foco inicial en entornos de Call Center.**
 
-Posibles resultados esperados 
-1. Optimización del tiempo de búsqueda de información para los agentes del call center.
-2. Mejora en la eficiencia operativa de RRHH, Reporting y Planificación.
-3. Mayor satisfacción de los empleados al disponer de un sistema centralizado y eficiente.
-4. Automatización de la generación de reportes y reducción del tiempo administrativo. 
+---
+
+## 📌 Descripción general
+
+Este proyecto, desarrollado como **Trabajo Fin de Máster en Data Science y Business Analytics**, tiene como objetivo diseñar e implementar un **asistente inteligente** capaz de optimizar la gestión de la información y automatizar tareas en distintos departamentos de una empresa (Call Center, RRHH, Reporting, Coordinación, etc.).
+
+El asistente combina:
+- IA generativa (OpenAI)
+- Recuperación semántica (Pinecone)
+- Backend en Flask
+- MongoDB
+- Carga de documentos PDF y CSV
+- Generación de visualizaciones e informes automáticos
+
+Adapta sus respuestas según el perfil del usuario y ofrece una experiencia personalizada y contextualizada.
+
+---
+
+## 🎯 Objetivos
+
+### Objetivo general
+Desarrollar un asistente inteligente que centralice y automatice la recuperación de información y tareas repetitivas, adaptando su comportamiento a distintos roles dentro de una organización.
+
+### Objetivos específicos
+1. Centralizar la documentación interna: scripts de llamadas, políticas, procedimientos.
+2. Implementar un sistema LLM para consultas en lenguaje natural.
+3. Personalizar respuestas según el perfil del usuario (Agente, RRHH, Reporting, Coordinación...).
+4. Permitir análisis de datos y generación automatizada de informes.
+5. Facilitar la carga y exploración de archivos CSV con visualización de KPIs.
+
+---
+
+## 🗂️ Fuentes de datos utilizadas
+
+1. **Documentación interna (simulada):**
+   - Guiones, FAQs, políticas de atención, manuales de RRHH.
+2. **Datos CRM y operativos simulados:**
+   - Métricas de desempeño (AHT, FCR, satisfacción, volumen).
+3. **Documentos PDF estructurados y no estructurados.**
+4. **Archivos CSV con datos de turnos, formación o métricas.**
+5. **Datasets públicos o ficticios generados a partir de estándares del sector.**
+
+---
+
+## ⚙️ Tecnologías empleadas
+
+- 🐍 Python (Flask)
+- 🧠 OpenAI API (GPT)
+- 📚 Pinecone (RAG – Retrieval-Augmented Generation)
+- ☁️ MongoDB Atlas
+- 📁 AWS S3 (almacenamiento de documentos)
+- 📊 Visualización de datos con Matplotlib / Plotly
+- 🔐 Autenticación de usuarios
+
+---
+
+## 🚀 Funcionalidades clave
+
+- ✅ Consultas en lenguaje natural con IA generativa
+- ✅ Personalización según tipo de usuario
+- ✅ Subida y lectura de documentos PDF
+- ✅ Análisis y visualización de archivos CSV
+- ✅ Generación de informes automáticos con IA
+- ✅ Panel de control web seguro y funcional
+
+---
+
+## 📈 Resultados esperados
+
+- ⏱️ Reducción del tiempo de búsqueda de información operativa
+- 📊 Automatización de reportes y visualizaciones
+- 🤖 Mejora en la eficiencia de procesos administrativos y formativos
+- 😊 Mayor satisfacción del usuario interno por acceso rápido y contextualizado
+
+---
+
+## 🧪 Próximos pasos / mejoras futuras
+
+- Integración con calendarios externos (Google Calendar)
+- Control de sesiones y logs de uso
+- Mejora del análisis semántico en respuestas complejas
+- Traducción multilingüe
+
+---
+
+
